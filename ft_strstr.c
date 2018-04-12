@@ -1,37 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jsobel <jsobel@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/09 18:00:52 by jsobel            #+#    #+#             */
-/*   Updated: 2018/04/10 18:19:40 by jsobel           ###   ########.fr       */
+/*   Created: 2018/04/10 17:28:48 by jsobel            #+#    #+#             */
+/*   Updated: 2018/04/10 18:12:28 by jsobel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+char	*ft_strstr(const char *str, const char *to_find)
 {
-	char			*temp;
-	unsigned long	i;
+	size_t	i;
+	size_t	j;
 
 	i = 0;
-	if (!(temp = (char *)malloc(n + 1)))
-		return (0);
-	while (i < n)
+	while (str[i])
 	{
-		temp[i] = *((char *)src + i);
+		j = 0;
+		while (str[i + j] == to_find[j])
+		{
+			if (to_find[j + 1] == '\0')
+				return ((char *)str + i);
+			j++;
+		}
 		i++;
 	}
-	temp[i] = 0;
-	i = 0;
-	while (temp[i])
-	{
-		*((char *)dest + i) = temp[i];
-		i++;
-	}
-	free(temp);
-	return (dest);
+	return (NULL);
 }

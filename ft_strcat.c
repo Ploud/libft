@@ -1,37 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jsobel <jsobel@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/09 18:00:52 by jsobel            #+#    #+#             */
-/*   Updated: 2018/04/10 18:19:40 by jsobel           ###   ########.fr       */
+/*   Created: 2018/04/10 15:24:42 by jsobel            #+#    #+#             */
+/*   Updated: 2018/04/10 15:29:55 by jsobel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+char	*ft_strcat(char *dest, const char *src)
 {
-	char			*temp;
-	unsigned long	i;
+	size_t i;
+	size_t j;
 
 	i = 0;
-	if (!(temp = (char *)malloc(n + 1)))
-		return (0);
-	while (i < n)
-	{
-		temp[i] = *((char *)src + i);
+	j = 0;
+	while (dest[i])
 		i++;
-	}
-	temp[i] = 0;
-	i = 0;
-	while (temp[i])
+	while (src[j])
 	{
-		*((char *)dest + i) = temp[i];
-		i++;
+		dest[i + j] = src[j];
+		j++;
 	}
-	free(temp);
+	dest[i + j] = 0;
 	return (dest);
 }
