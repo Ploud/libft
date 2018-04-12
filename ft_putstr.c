@@ -1,36 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jsobel <jsobel@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/10 15:02:26 by jsobel            #+#    #+#             */
-/*   Updated: 2018/04/12 15:36:16 by jsobel           ###   ########.fr       */
+/*   Created: 2018/04/12 17:57:44 by jsobel            #+#    #+#             */
+/*   Updated: 2018/04/12 18:02:42 by jsobel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncpy(char *dest, const char *src, size_t n)
+void	ft_putstr(char const *s)
 {
 	size_t i;
 
 	i = 0;
-	if (!dest || !src)
-		return (NULL);
-	while (src[i] && i < n)
+	if (!s)
+		return ;
+	while (s[i])
 	{
-		dest[i] = src[i];
+		write(1, &s[i], 1);
 		i++;
 	}
-	if (i < n)
-	{
-		while (dest[i])
-		{
-			dest[i] = 0;
-			i++;
-		}
-	}
-	return (dest);
 }

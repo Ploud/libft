@@ -6,7 +6,7 @@
 /*   By: jsobel <jsobel@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/12 14:52:48 by jsobel            #+#    #+#             */
-/*   Updated: 2018/04/12 14:55:14 by jsobel           ###   ########.fr       */
+/*   Updated: 2018/04/12 16:32:53 by jsobel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ int		ft_strequ(char const *s1, char const *s2)
 	size_t i;
 
 	i = 0;
-	while (s1[i] == s2[i])
+	if (!s1 || !s2)
+		return (0);
+	while (s1[i] == s2[i] && s1[i] && s2[i])
 		i++;
-	if (s1[i] == 0 && s2[i] == 0)
-		return (1);
-	return (0);
+	return (s1[i] == 0 && s2[i] == 0);
 }

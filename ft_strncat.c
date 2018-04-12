@@ -6,7 +6,7 @@
 /*   By: jsobel <jsobel@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/10 15:24:42 by jsobel            #+#    #+#             */
-/*   Updated: 2018/04/10 15:31:57 by jsobel           ###   ########.fr       */
+/*   Updated: 2018/04/12 15:37:12 by jsobel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_strncat(char *dest, const char *src, size_t n)
 
 	i = 0;
 	j = 0;
+	if (!dest || !src)
+		return (NULL);
 	while (dest[i])
 		i++;
 	while (src[j] && j < n)

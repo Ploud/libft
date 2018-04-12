@@ -6,7 +6,7 @@
 /*   By: jsobel <jsobel@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/12 14:38:33 by jsobel            #+#    #+#             */
-/*   Updated: 2018/04/12 14:40:10 by jsobel           ###   ########.fr       */
+/*   Updated: 2018/04/12 15:41:36 by jsobel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
 	size_t i;
 
+	if (!s)
+		return (NULL);
 	i = 0;
 	while (s[i])
 	{

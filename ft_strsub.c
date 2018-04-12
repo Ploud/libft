@@ -1,36 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_strsub.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jsobel <jsobel@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/10 15:02:26 by jsobel            #+#    #+#             */
-/*   Updated: 2018/04/12 15:36:16 by jsobel           ###   ########.fr       */
+/*   Created: 2018/04/12 15:04:30 by jsobel            #+#    #+#             */
+/*   Updated: 2018/04/12 15:24:58 by jsobel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncpy(char *dest, const char *src, size_t n)
+char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
-	size_t i;
+	char	*tab;
+	size_t	i;
 
-	i = 0;
-	if (!dest || !src)
+	if (!s)
 		return (NULL);
-	while (src[i] && i < n)
+	if (!(tab = malloc(len + 1)))
+		return (NULL);
+	tab[len] = 0;
+	i = 0;
+	while (i < len)
 	{
-		dest[i] = src[i];
+		tab[i] = s[start + i];
 		i++;
 	}
-	if (i < n)
-	{
-		while (dest[i])
-		{
-			dest[i] = 0;
-			i++;
-		}
-	}
-	return (dest);
+	return (tab);
 }

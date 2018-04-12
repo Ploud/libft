@@ -6,7 +6,7 @@
 /*   By: jsobel <jsobel@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/10 13:10:18 by jsobel            #+#    #+#             */
-/*   Updated: 2018/04/10 14:40:23 by jsobel           ###   ########.fr       */
+/*   Updated: 2018/04/12 15:28:42 by jsobel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ size_t ft_strlen(const char *s)
 	size_t i;
 
 	i = 0;
+	if (!s)
+		return (NULL);
 	while (s[i])
 		i++;
 	return (i);

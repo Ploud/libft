@@ -6,7 +6,7 @@
 /*   By: jsobel <jsobel@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/12 14:41:43 by jsobel            #+#    #+#             */
-/*   Updated: 2018/04/12 14:48:47 by jsobel           ###   ########.fr       */
+/*   Updated: 2018/04/12 15:28:22 by jsobel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_strmap(char const *s, char (*f)(char))
 	size_t	i;
 	char	*tab;
 
+	if (!s)
+		return (NULL);
 	i = ft_strlen(s);
 	if (!(tab = malloc(i + 1)))
 		return (NULL);

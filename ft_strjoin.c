@@ -1,36 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jsobel <jsobel@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/10 15:02:26 by jsobel            #+#    #+#             */
-/*   Updated: 2018/04/12 15:36:16 by jsobel           ###   ########.fr       */
+/*   Created: 2018/04/12 15:13:24 by jsobel            #+#    #+#             */
+/*   Updated: 2018/04/12 15:54:48 by jsobel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncpy(char *dest, const char *src, size_t n)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	size_t i;
-
-	i = 0;
-	if (!dest || !src)
+	size_t	i;
+	char	*tab;
+	if (!s1 && !s2)
 		return (NULL);
-	while (src[i] && i < n)
-	{
-		dest[i] = src[i];
-		i++;
-	}
-	if (i < n)
-	{
-		while (dest[i])
-		{
-			dest[i] = 0;
-			i++;
-		}
-	}
-	return (dest);
+	if (!s1)
+		return (ft_strdup(s2));
+	if (!s2)
+		return (ft_strdup(s1));
+	i = ft_strlen(s1) + ft_strlen(s2);
+	if (!(tab = malloc(i + 1)))
+		return (NULL);
+	tab[i] = 0;
+	ft_strcpy(tab, s1);
+	ft_strcat(tab, s2);
+	return (tab);
 }

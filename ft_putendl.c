@@ -1,36 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_putendl.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jsobel <jsobel@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/10 15:02:26 by jsobel            #+#    #+#             */
-/*   Updated: 2018/04/12 15:36:16 by jsobel           ###   ########.fr       */
+/*   Created: 2018/04/12 18:03:50 by jsobel            #+#    #+#             */
+/*   Updated: 2018/04/12 18:05:00 by jsobel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncpy(char *dest, const char *src, size_t n)
+void	ft_putendl(char const *s)
 {
-	size_t i;
-
-	i = 0;
-	if (!dest || !src)
-		return (NULL);
-	while (src[i] && i < n)
-	{
-		dest[i] = src[i];
-		i++;
-	}
-	if (i < n)
-	{
-		while (dest[i])
-		{
-			dest[i] = 0;
-			i++;
-		}
-	}
-	return (dest);
+	ft_putstr(s);
+	write(1, "\n", 1);
 }
