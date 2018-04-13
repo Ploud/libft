@@ -6,7 +6,7 @@
 /*   By: jsobel <jsobel@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/09 17:35:29 by jsobel            #+#    #+#             */
-/*   Updated: 2018/04/09 17:47:17 by jsobel           ###   ########.fr       */
+/*   Updated: 2018/04/12 19:44:38 by jsobel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	unsigned long i;
+	size_t i;
 
 	i = 0;
 	while (i < n)

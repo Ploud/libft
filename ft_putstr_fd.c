@@ -1,27 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jsobel <jsobel@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/12 14:38:33 by jsobel            #+#    #+#             */
-/*   Updated: 2018/04/12 19:25:15 by jsobel           ###   ########.fr       */
+/*   Created: 2018/04/12 18:36:43 by jsobel            #+#    #+#             */
+/*   Updated: 2018/04/12 18:42:46 by jsobel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char *))
+void	ft_putstr_fd(char const *s, int fd)
 {
 	size_t i;
 
+	i = 0;
 	if (!s)
 		return ;
-	i = 0;
 	while (s[i])
 	{
-		f(i, &s[i]);
+		ft_putchar_fd(s[i], fd);
 		i++;
 	}
 }

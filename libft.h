@@ -6,7 +6,7 @@
 /*   By: jsobel <jsobel@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/09 16:29:44 by jsobel            #+#    #+#             */
-/*   Updated: 2018/04/12 18:03:31 by jsobel           ###   ########.fr       */
+/*   Updated: 2018/04/12 18:58:05 by jsobel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ size_t				ft_strlcat(char *dest, const char *src, size_t size);
 char				*ft_strchr(const char *s, int c);
 char				*ft_strrchr(const char *s, int c);
 char				*ft_strstr(const char *str, const char *to_find);
-char				*ft_strnstr(const char *big, const char *little, size_t len);
+char				*ft_strnstr(const char *str, const char *find, size_t len);
 int					ft_atoi(const char *str);
 int					ft_isalpha(int c);
 int					ft_isdigit(int c);
@@ -61,5 +61,10 @@ char				*ft_itoa(int n);
 void				ft_putchar(char c);
 void				ft_putstr(char const *s);
 void				ft_putendl(char const *s);
+void				ft_putnbr(int n);
+void				ft_putchar_fd(char c, int fd);
+void				ft_putstr_fd(char const *s, int fd);
+void				ft_putendl_fd(char const *s, int fd);
+void				ft_putnbr_fd(int n, int fd);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: jsobel <jsobel@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/09 16:23:12 by jsobel            #+#    #+#             */
-/*   Updated: 2018/04/09 17:27:18 by jsobel           ###   ########.fr       */
+/*   Updated: 2018/04/13 15:03:18 by jsobel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 void	*ft_memset(void *s, int c, size_t n)
 {
-	unsigned long i;
+	size_t i;
 
 	i = 0;
 	while (i < n)
 	{
-		*((int *)s + i) = c;
+		*((char *)s + i) = c;
 		i++;
 	}
 	return (s);

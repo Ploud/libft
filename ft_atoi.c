@@ -6,7 +6,7 @@
 /*   By: jsobel <jsobel@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/10 18:31:35 by jsobel            #+#    #+#             */
-/*   Updated: 2018/04/10 18:35:41 by jsobel           ###   ########.fr       */
+/*   Updated: 2018/04/12 19:00:20 by jsobel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_atoi(const char *str)
 {
-	size_t i;
-	int nb;
-	int sign;
+	size_t	i;
+	int		nb;
+	int		sign;
 
 	i = 0;
 	nb = 0;

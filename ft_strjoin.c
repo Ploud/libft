@@ -6,7 +6,7 @@
 /*   By: jsobel <jsobel@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/12 15:13:24 by jsobel            #+#    #+#             */
-/*   Updated: 2018/04/12 15:54:48 by jsobel           ###   ########.fr       */
+/*   Updated: 2018/04/12 19:01:29 by jsobel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 {
 	size_t	i;
 	char	*tab;
+
 	if (!s1 && !s2)
 		return (NULL);
 	if (!s1)

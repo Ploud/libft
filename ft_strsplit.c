@@ -6,13 +6,13 @@
 /*   By: jsobel <jsobel@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/12 16:14:05 by jsobel            #+#    #+#             */
-/*   Updated: 2018/04/12 16:24:52 by jsobel           ###   ########.fr       */
+/*   Updated: 2018/04/12 19:05:24 by jsobel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int static	compte_lettres(char const *str, char c)
+static int	compte_lettres(char const *str, char c)
 {
 	int i;
 
@@ -24,7 +24,7 @@ int static	compte_lettres(char const *str, char c)
 	return (i);
 }
 
-int static	compte_mots(char const *str, char c)
+static int	compte_mots(char const *str, char c)
 {
 	int i;
 	int nbr_mot;
