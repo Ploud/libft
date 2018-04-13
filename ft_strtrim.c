@@ -6,7 +6,7 @@
 /*   By: jsobel <jsobel@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/12 15:56:03 by jsobel            #+#    #+#             */
-/*   Updated: 2018/04/12 16:12:48 by jsobel           ###   ########.fr       */
+/*   Updated: 2018/04/13 17:12:27 by jsobel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,9 @@ char	*ft_strtrim(char const *s)
 	if (!(tab = malloc(size + 1)))
 		return (NULL);
 	while (j < size)
+	{
 		tab[j] = s[i + j];
+		j++;
+	}
 	return (tab);
 }

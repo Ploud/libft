@@ -6,7 +6,7 @@
 /*   By: jsobel <jsobel@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/09 16:29:44 by jsobel            #+#    #+#             */
-/*   Updated: 2018/04/12 18:58:05 by jsobel           ###   ########.fr       */
+/*   Updated: 2018/04/13 17:10:11 by jsobel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ void				*ft_memcpy(void *dest, const void *src, size_t n);
 void				ft_bzero(void *s, size_t n);
 void				*ft_memccpy(void *s1, const void *s2, int c, size_t n);
 void				*ft_memmove(void *dest, const void *src, size_t n);
+void				*ft_memchr(const void *s, int c, size_t n);
 int					ft_memcmp(const void *s1, const void *s2, size_t n);
 size_t				ft_strlen(const char *s);
 char				*ft_strdup(const char *s);
@@ -34,6 +35,8 @@ char				*ft_strchr(const char *s, int c);
 char				*ft_strrchr(const char *s, int c);
 char				*ft_strstr(const char *str, const char *to_find);
 char				*ft_strnstr(const char *str, const char *find, size_t len);
+int					ft_strcmp(const char *s1, const char *s2);
+int					ft_strncmp(const char *s1, const char *s2, size_t n);
 int					ft_atoi(const char *str);
 int					ft_isalpha(int c);
 int					ft_isdigit(int c);
@@ -45,6 +48,7 @@ int					ft_tolower(int c);
 
 void				*ft_memalloc(size_t size);
 void				ft_memdel(void **ap);
+char				*ft_strnew(size_t size);
 void				ft_strdel(char **as);
 void				ft_strclr(char *s);
 void				ft_striter(char *s, void (*f)(char *));
