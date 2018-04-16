@@ -6,7 +6,7 @@
 /*   By: jsobel <jsobel@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/10 15:45:13 by jsobel            #+#    #+#             */
-/*   Updated: 2018/04/10 17:03:08 by jsobel           ###   ########.fr       */
+/*   Updated: 2018/04/16 15:21:31 by jsobel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,13 +23,13 @@ size_t			ft_strlcat(char *dest, const char *src, size_t size)
 	destl = i;
 	srcl = ft_strlen(src);
 	j = 0;
-	while (src[j] && i < size - 1)
+	while (src[j] && i + 1 < size)
 	{
 		dest[i] = src[j];
 		i++;
 		j++;
 	}
-	dest[i] = '\0';
+	dest[i] = 0;
 	if (size < destl)
 		return (srcl + size);
 	return (srcl + destl);

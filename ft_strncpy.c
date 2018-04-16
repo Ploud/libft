@@ -6,7 +6,7 @@
 /*   By: jsobel <jsobel@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/10 15:02:26 by jsobel            #+#    #+#             */
-/*   Updated: 2018/04/12 15:36:16 by jsobel           ###   ########.fr       */
+/*   Updated: 2018/04/13 17:26:16 by jsobel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,20 +17,15 @@ char	*ft_strncpy(char *dest, const char *src, size_t n)
 	size_t i;
 
 	i = 0;
-	if (!dest || !src)
-		return (NULL);
 	while (src[i] && i < n)
 	{
 		dest[i] = src[i];
 		i++;
 	}
-	if (i < n)
+	while (i < n)
 	{
-		while (dest[i])
-		{
-			dest[i] = 0;
-			i++;
-		}
+		dest[i] = 0;
+		i++;
 	}
 	return (dest);
 }

@@ -6,7 +6,7 @@
 /*   By: jsobel <jsobel@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/10 17:04:25 by jsobel            #+#    #+#             */
-/*   Updated: 2018/04/10 18:10:59 by jsobel           ###   ########.fr       */
+/*   Updated: 2018/04/16 18:29:45 by jsobel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,7 @@ char	*ft_strchr(const char *s, int c)
 			return ((char *)s + i);
 		i++;
 	}
+	if (c == 0)
+		return ((char *)s + i);
 	return (NULL);
 }

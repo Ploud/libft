@@ -6,7 +6,7 @@
 /*   By: jsobel <jsobel@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/10 17:28:48 by jsobel            #+#    #+#             */
-/*   Updated: 2018/04/12 15:33:20 by jsobel           ###   ########.fr       */
+/*   Updated: 2018/04/16 18:30:30 by jsobel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ char	*ft_strstr(const char *str, const char *to_find)
 	size_t	j;
 
 	i = 0;
-	if (!str || !to_find)
-		return (NULL);
+	if (!to_find[0])
+		return ((char *)str);
 	while (str[i])
 	{
 		j = 0;
