@@ -6,7 +6,7 @@
 /*   By: jsobel <jsobel@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/12 14:20:24 by jsobel            #+#    #+#             */
-/*   Updated: 2018/04/12 19:25:05 by jsobel           ###   ########.fr       */
+/*   Updated: 2018/04/17 18:14:42 by jsobel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_striter(char *s, void (*f)(char *))
 	size_t i;
 
 	i = 0;
-	if (!s)
+	if (!s || !f)
 		return ;
 	while (s[i])
 	{
