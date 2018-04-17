@@ -6,7 +6,7 @@
 /*   By: jsobel <jsobel@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/12 16:14:05 by jsobel            #+#    #+#             */
-/*   Updated: 2018/04/17 18:01:27 by jsobel           ###   ########.fr       */
+/*   Updated: 2018/04/17 18:40:43 by jsobel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,8 +46,8 @@ static int	compte_mots(char const *str, char c)
 
 static int	remplir(char **tab, char c, int j, char const *str)
 {
-	int k;
-	char *truc;
+	int		k;
+	char	*truc;
 
 	while (str[j] == c)
 		j++;
